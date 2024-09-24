@@ -264,6 +264,10 @@ textarea {
 
 /* Responsive Design for Tablets */
 @media (max-width: 768px) {
+    body {
+        overflow: hidden;
+        width: 100%;
+    }
     .container, #resumePage {
         width: 95%;
         padding: 16px;

@@ -436,6 +436,10 @@ button:hover {
 
 /* ------------------------------- Responsive CV ----------------------- */
 @media screen and (max-width: 1220px) {
+  body {
+    overflow: hidden;
+    width: 100%;
+}
   .section-of-cv {
     width: 80%;
   }
