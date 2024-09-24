@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Zakia-Bashir</div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="index.html">Resume design-1</a>
+            <a href="../design2/index.html">Resume Design-2</a>
+            
+        </nav>
+    </header>
+    <div class="container">
+        <form id="resumeForm">
+            <h1>Dynamic Resume <br> Created By <span>Zakia Bashir</span></h1>
+            <table align="center">
+                <tr>
+                    <td colspan="2">
+                        <h2>Personal Info</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>User-Name:</td>
+                    <td><input type="text" placeholder="username" id="username" required></td>
+                </tr>
+                <tr>
+                    <td>Full Name:</td>
+                    <td><input type="text" name="name" id="name" required></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" id="email" required></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td><input type="tel" name="phone" id="phone" required></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" name="dob" id="dob" required></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="male" required> Male<br>
+                        <input type="radio" name="gender" value="female" required> Female<br>
+                        <input type="radio" name="gender" value="other" required> Other
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea name="address" id="address" rows="3"  required></textarea></td>
+                </tr>
+                <tr>
+                    <td>Profile Picture:</td>
+                    <td><input type="file" id="photo" name="photo" accept="image/*" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h2>Work Experience</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Job Title:</td>
+                    <td><input type="text" name="job_title" id="job_title" required></td>
+                </tr>
+                <tr>
+                    <td>Company Name:</td>
+                    <td><input type="text" name="company_name" id="company_name" required></td>
+                </tr>
+                <tr>
+                    <td>Start Date:</td>
+                    <td><input type="date" name="start_date" id="start_date" required></td>
+                </tr>
+                <tr>
+                    <td>End Date:</td>
+                    <td><input type="date" name="end_date" id="end_date"></td>
+                </tr>
+                <tr>
+                    <td>Job Description:</td>
+                    <td><textarea name="job_description" id="job_description" rows="4" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h2>Education</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Degree:</td>
+                    <td><input type="text" name="degree" id="degree" required></td>
+                </tr>
+                <tr>
+                    <td>Institution:</td>
+                    <td><input type="text" name="institution" id="institution" required></td>
+                </tr>
+                <tr>
+                    <td>Start Date:</td>
+                    <td><input type="date" name="edu_start_date" id="edu_start_date" required></td>
+                </tr>
+                <tr>
+                    <td>End Date:</td>
+                    <td><input type="date" name="edu_end_date" id="edu_end_date"></td>
+                </tr>
+                <tr>
+                    <td>Grade:</td>
+                    <td><input type="text" name="grade" id="grade" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h2>Skills</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Your Skills:</td>
+                    <td><textarea id="skills" name="skills" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h2>Languages</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Languages:</td>
+                    <td><textarea id="languages" name="languages" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h2>Hobbies</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobbies:</td>
+                    <td><textarea id="hobbies" name="hobbies" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h2>References</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Reference Name:</td>
+                    <td><input type="text" name="reference_name" id="reference_name" required></td>
+                </tr>
+                <tr>
+                    <td>Reference Contact:</td>
+                    <td><input type="tel" name="reference_contact" id="reference_contact" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h2>Cover Letter</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cover Letter:</td>
+                    <td><textarea name="cover_letter" id="cover_letter" rows="5" required></textarea></td>
+                </tr>
+            </table>
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div id="resumePage" class="resume-page hidden">
+        <div id="resumeContent" class="resume-content">
+            <img id="resumePhoto" class="resume-photo" src="" alt="Profile Photo">
+            <h1 id="resumeName"></h1>
+            <p >Email: &nbsp;&nbsp; <span id="resumeEmail"></span></p>
+            <p >Date_of_Birth: &nbsp; &nbsp;<span id="resumedob"></span></p>
+            <p >Phone:&nbsp;&nbsp; <span id="resumePhone"></span></p>
+            <p >Gender:&nbsp;&nbsp; <span id="resumegender"></span></p>
+            <p >Address:&nbsp;&nbsp; <span id="resumeaddress"></span></p>
+
+            <h2>Education:</h2>
+            <p > Degree-Name: &nbsp;&nbsp; <span id="resumedegree"></span></p>
+            <p >Institution-Name:&nbsp;&nbsp; <span id="resumeinstitute"></span></p>
+            <p >start_date:&nbsp;&nbsp; <span id="resumestart-date"></span></p>
+            <p >end_date:&nbsp;&nbsp; <span id="resumeend-date"></span></p>
+            <p >Grade:&nbsp;&nbsp; <span id="resumegrade"></span></p>
+
+            <h2>Work Experience:</h2>
+            <p > job_title: &nbsp;&nbsp;<span id="resumejobtitle"></span></p>
+            <p > company_name: &nbsp;&nbsp; <span id="resumecompanyname"></span></p>
+            <p > start_date:&nbsp;&nbsp; <span id="resumestartdate"></span></p>
+            <p > end_date: &nbsp;&nbsp; <span id="resumeenddate"></span></p>
+            <p > job_description: &nbsp;&nbsp; <span id="resumejobdescription"></span></p>
+            <h2>Skills:</h2>
+            <p >Skills:&nbsp;&nbsp; <span id="resumeSkills"></span></p>
+            <h2>Languages</h2>
+            <p >Languages:&nbsp;&nbsp; <span id="resumelanguages"></span></p>
+            <h2>Hobbies</h2>
+            <p > Hobbies: &nbsp;&nbsp; <span id="resumehobbies"></span></p>
+            <h2>Reference</h2>
+            <p > Reference_name: &nbsp;&nbsp; <span id="resumerefrencename"></span></p>
+            <p > Reference_contact: &nbsp;&nbsp; <span id="resumerefrencecontact"></span></p>
+            <h2>Cover Letter</h2>
+            <p >cover_letter: &nbsp;&nbsp; <span id="resumerecoverletter"></span></p>
+        </div>
+
+        <button id="editButton">Edit</button>
+        <button id="backButton" onclick="window.location.href='index.html'">Back to Form</button>
+        <button id="shareLinkButton" class="btn btn-primary">Share Your Resume</button>
+        <button id="download-pdf">Download PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
