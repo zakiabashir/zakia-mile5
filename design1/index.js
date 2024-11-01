@@ -52,9 +52,9 @@ resumeForm.addEventListener('submit', function (event) {
     document.getElementById('resumeenddate').textContent = endDate;
     document.getElementById('resumejobdescription').textContent = jobDescription;
     // Assuming skills, languages, and hobbies are arrays, join them with commas
-    const skillsText = skills.join(', ');
-    const languagesText = languages.join(', ');
-    const hobbiesText = hobbies.join(', ');
+    const skillsText = skills.join('\ | ⭐️ ');
+    const languagesText = languages.join('\n⭐️ ');
+    const hobbiesText = hobbies.join('\n⭐️');
     // Set the textContent with the joined strings
     document.getElementById('resumeSkills').textContent = skillsText;
     document.getElementById('resumelanguages').textContent = languagesText;

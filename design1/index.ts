@@ -57,9 +57,9 @@ const hobbies = Array.from(document.querySelectorAll('input[name="hobbies"]:chec
     (document.getElementById('resumejobdescription') as HTMLElement).textContent = jobDescription;
 
     // Assuming skills, languages, and hobbies are arrays, join them with commas
-const skillsText = skills.join(', ');
-const languagesText = languages.join(', ');
-const hobbiesText = hobbies.join(', ');
+const skillsText = skills.join('\ | ⭐️ ');
+const languagesText = languages.join('\n⭐️ ');
+const hobbiesText = hobbies.join('\n⭐️');
 
 // Set the textContent with the joined strings
 (document.getElementById('resumeSkills') as HTMLElement).textContent = skillsText;
