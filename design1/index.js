@@ -27,9 +27,10 @@ resumeForm.addEventListener('submit', function (event) {
     const eduStartDate = document.getElementById('edu_start_date').value;
     const eduEndDate = document.getElementById('edu_end_date').value;
     const grade = document.getElementById('grade').value;
-    const skills = document.getElementById('skills').value;
-    const languages = document.getElementById('languages').value;
-    const hobbies = document.getElementById('hobbies').value;
+    // Collect all checked skills, languages, and hobbies
+    const skills = Array.from(document.querySelectorAll('input[name="skills"]:checked')).map((el) => el.value);
+    const languages = Array.from(document.querySelectorAll('input[name="languages"]:checked')).map((el) => el.value);
+    const hobbies = Array.from(document.querySelectorAll('input[name="hobbies"]:checked')).map((el) => el.value);
     const referenceName = document.getElementById('reference_name').value;
     const referenceContact = document.getElementById('reference_contact').value;
     const coverLetter = document.getElementById('cover_letter').value;
@@ -50,9 +51,14 @@ resumeForm.addEventListener('submit', function (event) {
     document.getElementById('resumestartdate').textContent = startDate;
     document.getElementById('resumeenddate').textContent = endDate;
     document.getElementById('resumejobdescription').textContent = jobDescription;
-    document.getElementById('resumeSkills').textContent = skills;
-    document.getElementById('resumelanguages').textContent = languages;
-    document.getElementById('resumehobbies').textContent = hobbies;
+    // Assuming skills, languages, and hobbies are arrays, join them with commas
+    const skillsText = skills.join(', ');
+    const languagesText = languages.join(', ');
+    const hobbiesText = hobbies.join(', ');
+    // Set the textContent with the joined strings
+    document.getElementById('resumeSkills').textContent = skillsText;
+    document.getElementById('resumelanguages').textContent = languagesText;
+    document.getElementById('resumehobbies').textContent = hobbiesText;
     document.getElementById('resumerefrencename').textContent = referenceName;
     document.getElementById('resumerefrencecontact').textContent = referenceContact;
     document.getElementById('resumerecoverletter').textContent = coverLetter;
