@@ -3,6 +3,7 @@ var _a, _b, _c;
 // Get form and resume elements
 const resumeForm = document.getElementById('resumeForm');
 const resumePage = document.getElementById('resumePage');
+const header = document.getElementById('header');
 // Function to generate the resume
 resumeForm.addEventListener('submit', function (event) {
     var _a, _b;
@@ -66,6 +67,7 @@ resumeForm.addEventListener('submit', function (event) {
     }
     // Hide the form and show the resume page
     resumeForm.style.display = 'none';
+    header.style.display = 'none';
     resumePage.classList.remove('hidden');
 });
 // Download PDF button

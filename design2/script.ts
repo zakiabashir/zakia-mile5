@@ -1,4 +1,5 @@
 // Get references to necessary DOM elements
+const header = document.getElementById('header') as HTMLElement;
 const formSection = document.querySelector(".form-section") as HTMLDivElement;
 const cvSection = document.querySelector(".cv-section") as HTMLDivElement;
 const nameInput = document.getElementById('Name') as HTMLInputElement | null;
@@ -116,6 +117,7 @@ button?.addEventListener('click', (event) => {
 
   // Hide the form section and show the CV section
   formSection.style.display = "none";
+  header.style.display = "none";
   cvSection.style.display = "block";
 });
 

@@ -1,7 +1,7 @@
 // Get form and resume elements
 const resumeForm = document.getElementById('resumeForm') as HTMLFormElement;
 const resumePage = document.getElementById('resumePage') as HTMLElement;
-
+const header = document.getElementById('header') as HTMLElement;
 // Function to generate the resume
 resumeForm.addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the form from submitting
@@ -73,7 +73,9 @@ resumeForm.addEventListener('submit', function (event) {
 
     // Hide the form and show the resume page
     resumeForm.style.display = 'none';
+    header.style.display = 'none';
     resumePage.classList.remove('hidden');
+    
 });
 
 // Download PDF button

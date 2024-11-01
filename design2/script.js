@@ -1,5 +1,6 @@
 "use strict";
 // Get references to necessary DOM elements
+const header = document.getElementById('header');
 const formSection = document.querySelector(".form-section");
 const cvSection = document.querySelector(".cv-section");
 const nameInput = document.getElementById('Name');
@@ -98,6 +99,7 @@ button === null || button === void 0 ? void 0 : button.addEventListener('click',
     }
     // Hide the form section and show the CV section
     formSection.style.display = "none";
+    header.style.display = "none";
     cvSection.style.display = "block";
 });
 // Function to switch back to form for editing
