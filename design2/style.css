@@ -244,7 +244,7 @@ input[type="file"] {
 
 @media screen and (max-width: 1220px) {
   form {
-    width: 80%;
+    width: 100%;
   }
   .page-01 button {
     width: 40vw;
@@ -259,7 +259,7 @@ input[type="file"] {
 }
 @media screen and (max-width: 1000px) {
   form {
-    width: 90%;
+    width: 100%;
   }
   .page-01 button {
     width: 60vw;
@@ -278,7 +278,7 @@ input[type="file"] {
 
 @media screen and (max-width: 560px) {
   form {
-    width: 95%;
+    width: 100%;
   }
   .cv-heading h1 {
     width: 80vw;
@@ -298,7 +298,7 @@ input[type="file"] {
   }
 
   fieldset {
-    width: 95%;
+    width: 100%;
     padding: 15px;
   }
   form legend:nth-child(1) {
@@ -447,7 +447,7 @@ button:hover {
 /* ------------------------------- Responsive CV ----------------------- */
 @media (max-width: 768px) {
   header {
-      width: 100%;
+      width: 600px
       flex-direction: column;
       align-items: center;
       padding: 20px 2%;
@@ -456,16 +456,16 @@ button:hover {
       font-size: 28px;
   }
   nav {
-      margin: 0 10px 0 0;
+      margin: 0 ;
+      padding: 0%;
       display: flex;
       flex-direction: column;
-      width: 50%;
+      width: 100%;
   }
   nav a {
-    margin-left: 2%;
       text-align: center;
-      padding: 0px 20px;
       width: 100%;
+      font-size: small;
   }
 }
 @media screen and (max-width: 1220px) {
@@ -473,13 +473,13 @@ button:hover {
     width: 100%;
 }
   .section-of-cv {
-    width: 80%;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 1080px) {
   .section-of-cv {
-    width: 90%;
+    width: 100%;
   }
 }
 
